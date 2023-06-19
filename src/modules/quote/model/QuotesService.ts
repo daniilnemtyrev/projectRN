@@ -12,7 +12,7 @@ export class QuotesService {
       });
 
       const quotes = Object.keys(data).map(key => ({
-        id: data[key].id,
+        id: `${data[key].id}`,
         title: key,
         last: data[key].last,
         highestBid: data[key].highestBid,

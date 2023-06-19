@@ -1,5 +1,5 @@
 export interface Quote {
-  id: number;
+  id: string;
   title: string;
   last: string;
   highestBid: string;

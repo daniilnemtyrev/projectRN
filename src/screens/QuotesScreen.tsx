@@ -1,13 +1,17 @@
+import {BottomTabScreenProps} from '@react-navigation/bottom-tabs';
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import {Button} from 'react-native';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import {QuotesTable} from 'src/modules/quote';
+import {TabNavigatorParamsList} from 'src/navigation/tab-navigator';
 
-export const QuotesScreen = ({navigation}) => {
+type Props = BottomTabScreenProps<TabNavigatorParamsList, 'QUOTE'>;
+
+export const QuotesScreen = ({navigation}: Props) => {
   return (
-    <View>
-      <Text>QUOTE</Text>
+    <SafeAreaView>
       <QuotesTable />
       <Button title="Go back" onPress={() => navigation.goBack()} />
-    </View>
+    </SafeAreaView>
   );
 };

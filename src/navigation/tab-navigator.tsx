@@ -6,6 +6,11 @@ import {HomeIcon, QuoteIcon} from 'src/shared/icons';
 import {HomeScreen} from 'src/screens/Home';
 import {QuotesScreen} from 'src/screens/QuotesScreen';
 
+export type TabNavigatorParamsList = {
+  HOME: undefined;
+  QUOTE: undefined;
+};
+
 const getTabIcon = (focused: boolean, routeName: AppRoutes) => {
   const iconsForRoutes: Record<AppRoutes, React.ReactNode> = {
     [AppRoutes.HOME]: <HomeIcon focused={focused} />,
@@ -15,7 +20,7 @@ const getTabIcon = (focused: boolean, routeName: AppRoutes) => {
   return iconsForRoutes[routeName];
 };
 
-const Tab = createBottomTabNavigator();
+const Tab = createBottomTabNavigator<TabNavigatorParamsList>();
 
 export const TabNavigator = () => {
   return (
