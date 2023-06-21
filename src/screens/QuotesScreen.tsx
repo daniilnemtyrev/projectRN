@@ -11,7 +11,6 @@ export const QuotesScreen = ({navigation}: Props) => {
   return (
     <SafeAreaView>
       <QuotesTable />
-      <Button title="Go back" onPress={() => navigation.goBack()} />
     </SafeAreaView>
   );
 };

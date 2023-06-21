@@ -20,6 +20,7 @@ export class QuotesStore {
   getQuotes = async () => {
     this.setIsLoading(true);
     const response = await QuotesService.getQuotes();
+    console.log(1);
 
     if (!response) {
       return;
